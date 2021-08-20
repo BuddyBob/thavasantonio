@@ -1,0 +1,20 @@
+body .post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+  
+body .post-container .post-inner {
+    position: relative;
+    max-width: 900px;
+    height: 400px;
+    border-radius: 15px;
+    margin: 40px;
+    transition: 0.5s;
+    bottom:50px;
+}
+
+body .post-container .post-inner .content{
+}
