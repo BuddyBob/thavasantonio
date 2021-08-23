@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { HashRouter as Router } from 'react-router-dom';
-import { HashRouter as Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import VM from './components/Pages/Virtual-Machine/VM'
 

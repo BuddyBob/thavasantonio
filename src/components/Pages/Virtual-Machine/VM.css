@@ -16,5 +16,22 @@ body .post-container .post-inner {
     bottom:50px;
 }
 
-body .post-container .post-inner .content{
+.virtualbox-img{
+    width:40%;
+    margin-top:2%;
+}
+
+.vb-img{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.quote {
+    margin: 0;
+    background: var(--grey-color);
+    padding: .4em;
+    border-radius: .5em;
+  }
+.quote blockquote {
+    margin: .5em;
 }
