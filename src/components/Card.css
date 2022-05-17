@@ -11,7 +11,7 @@ body .card-container {
 body .card-container .card {
   position: relative;
   min-width: 340px;
-  height: 400px;
+  height: 450px;
   border-radius: 15px;
   margin: 40px;
   transition: 0.5s;
@@ -60,15 +60,17 @@ body .card-container .card .box .content h3 {
   color: var(--text-color);
   z-index: 1;
   transition: 0.5s;
-  margin-bottom: 15px;
+  margin-top: 100px;
 }
 
-body .card-container .card .box .content p {
+body .card-container .card .box .content .description p {
+  position: relative;
   font-size: 1rem;
   font-weight: 300;
   color: var(--text-color);
   z-index: 1;
   transition: 0.5s;
+  top:0px;
 }
 
 .card-button {
@@ -79,7 +81,7 @@ body .card-container .card .box .content p {
   border-radius: 5px;
   text-decoration: none;
   color: white;
-  margin-top: 20px;
+  margin-top: 5px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }

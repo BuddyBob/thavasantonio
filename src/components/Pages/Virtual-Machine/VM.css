@@ -8,8 +8,7 @@ body .post-container {
   
 body .post-container .post-inner {
     position: relative;
-    max-width: 900px;
-    height: 400px;
+    width: 60%;
     border-radius: 15px;
     margin: 40px;
     transition: 0.5s;

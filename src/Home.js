@@ -18,7 +18,7 @@ export default function Home() {
             {/* post cards */}
             <div className="posts">
                 <div className="card-container">
-                    <Card link="virtual-machine" title="&ensp;&nbsp;Virtual &ensp;Machine" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?"/>
+                    <Card date='April 28 2021' link="virtual-machine" title="&ensp;&nbsp;Virtual &ensp;Machine" description="A virtual machine is operating system inside your computer. This article will teach you how to create one."/>
                     <Card title="Post 2" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?"/>
                     <Card title="Post 3" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?"/>
                 </div>

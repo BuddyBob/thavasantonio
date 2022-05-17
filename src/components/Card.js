@@ -6,8 +6,11 @@ export default function Card(props) {
                 <div className="box">
                     <div className="content">
                         <h3>{props.title}</h3>
-                        <p>{props.description}</p>
+                        <div className="description">
+                            <p>{props.description}</p>
+                        </div>
                         <Link to={"/"+props.link} className="card-button" href="#">Read More</Link>
+                        <p style={{fontSize:"15px", position:"relative", bottom:"14px"}}>{props.date}</p>
                     </div>
                 </div>
             </div>
