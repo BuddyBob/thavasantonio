@@ -135,7 +135,6 @@ export default function VSC_EXT() {
                     <p> 
                         I hoped you enjoyed this post and were able to find a few new extensions for your VS Code workspace. 
                     </p>
-
                 </div>
             </div>
         </div>
