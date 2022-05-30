@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');w
 
 li, a{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Fira Mono", sans-serif;
     color:var(--text-color);
     font-size: 20px;
     text-decoration:none;
@@ -21,19 +21,19 @@ header {
     color:var(--highlight-color)
 }
 
-.nav_links{
+.nav-link-container{
     list-style:none;
 }
 
-.nav_links li{
+.nav-link-container li{
     display:inline-block;
     padding:0px 20px;
 }
 
-.nav_links li a{
+.nav-link-container li a{
     transition: all 0.3s ease 0s;
 }
 
-.nav_links li a:hover{
+.nav-link-container li a:hover{
     color:var(--highlight-color)
 }

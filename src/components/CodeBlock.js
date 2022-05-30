@@ -1,10 +1,10 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import  { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import  { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 export default function CodeBlock(props) {
     return (
-        <div>
-            <SyntaxHighlighter language={props.language} style={ dracula }>
+        <div className="code-block">
+            <SyntaxHighlighter language={props.language} style={ materialDark }>
                 {props.codeString}
             </SyntaxHighlighter>
         </div>

@@ -10,8 +10,8 @@ body .card-container {
 
 body .card-container .card {
   position: relative;
-  min-width: 340px;
-  height: 450px;
+  min-width: 390px;
+  height: 500px;
   border-radius: 15px;
   margin: 40px;
   transition: 0.5s;

@@ -6,7 +6,7 @@ export default function NavBar() {
             <header>
                 <h4 className="logo">Logo</h4>
                 <nav>
-                    <ul className="nav_links">
+                    <ul className="nav-link-container">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/contacts">Contacts</Link></li>

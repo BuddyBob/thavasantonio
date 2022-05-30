@@ -1,20 +1,17 @@
 import React from 'react'
 import NavBar from '../../NavBar'
 import CodeBlock from '../../CodeBlock'
-import titleImg from '../../../assets/virtual-machine-title-img.png'
-import vbImg from '../../../assets/virtualbox-img.png'
-import vbDownloads from '../../../assets/virtualbox-download-os.png'
-import vbInstall from '../../../assets/virtualbox-install.png'
-import vbSecurity from '../../../assets/virtualbox-security-error.png'
-import vbDescription from '../../../assets/OS-describe.png'
-import vbMemory from '../../../assets/memory-allocation.png'
-import vbMainScreen from '../../../assets/virtualbox-mainscreen.png'
-import vbHardDisk from '../../../assets/HardDisk-options.png'
-import vbDisplay from '../../../assets/display-tab.png'
-import vbCPU from '../../../assets/set-cpu.png'
-import vbSystem from '../../../assets/system-tab.png'
-import vbStorage from '../../../assets/storage-tab.png'
-import './VM.css'
+import vbDownloads from '../../../assets/VirtualMachine/virtualbox-download-os.png'
+import vbInstall from '../../../assets/VirtualMachine/virtualbox-install.png'
+import vbSecurity from '../../../assets/VirtualMachine/virtualbox-security-error.png'
+import vbDescription from '../../../assets/VirtualMachine/OS-describe.png'
+import vbMemory from '../../../assets/VirtualMachine/memory-allocation.png'
+import vbMainScreen from '../../../assets/VirtualMachine/virtualbox-mainscreen.png'
+import vbHardDisk from '../../../assets/VirtualMachine/HardDisk-options.png'
+import vbDisplay from '../../../assets/VirtualMachine/display-tab.png'
+import vbCPU from '../../../assets/VirtualMachine/set-cpu.png'
+import vbSystem from '../../../assets/VirtualMachine/system-tab.png'
+import vbStorage from '../../../assets/VirtualMachine/storage-tab.png'
 export default function VM() {
     return (
         <div>
@@ -22,9 +19,10 @@ export default function VM() {
             <div className="post-container">
                 <div className="post-inner">
                     <div className="content">
-                        <h3 className="post-title">How to Create a<br/> Virtual Machine Using Virtual Box</h3>
-                        <h2 className="post-subtitle">What is a virtual machine?</h2>
+                        <h1 className="post-title">How to Create a<br/> Virtual Machine Using Virtual Box</h1>
+
                         
+                        <h2 className="post-subtitle">What is a virtual machine?</h2>
                         <p>
                             A virtual machine is basically a computer inside a computer. 
                             This computer uses a portion of your system's resources such as the CPU power, memory, ram etc. 
@@ -34,10 +32,9 @@ export default function VM() {
                             And you as the host, can throw out this guest whenever you want and bring in as many more guests as you want.
                             Just make sure you have the resources or… I guess you can't host them.
                         </p>
-                        <br/>
-                        <hr/>
+
+
                         <h2 className="post-subtitle">Why do you need it?</h2>
-                       
                         <p>
                             - <strong>A chance to use those old computers lying around in your house</strong> : Say you've got a very old, outdated computer. For example, a mac which is so old it no longer supports the new macOS updates. You can install Linux on your VM and use the machine however you like. 
                             <br/>
@@ -55,12 +52,8 @@ export default function VM() {
                             - <strong>Security</strong> : By using your main OS/host you are very vulnerable to several attacks such as sketchy email attachments, installing fake flash malware etc. But a VM is entirely isolated from the host making it extremely difficult for dangerous malware to affect your hardware. If your VM does happen to get infected, you can simply revert back to previous states. 
                         </p>
                         
-                        <br/>
-                        <hr/>
+
                         <h2 className="post-subtitle">What is VirtualBox?</h2>
-                        
-                        <input className="virtualbox-img" type="image" src={vbImg}/>
-                        
                         <p>
                             In order for the average joe to set up a VM, virtual machine software is necessary for a smooth setup.
                             <br/>
@@ -78,35 +71,27 @@ export default function VM() {
                             You may also pause your VM when running, shut it down and start it back up. 
                         </p>
 
-                        <br/>
-                        <hr/>
 
                         <h2 className="post-subtitle">How to setup VirtualBox? - full walkthrough</h2>
-                        
                         <p>
                             <h3> Download & Install VirtualBox</h3>
                             <br/>
 
-                            Start by clicking on this link -> <a className="link" target="_blank" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
+                            Start by clicking on this link -{'>'} <a className="link" target="_blank" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
                             <br/>
                             Download your host's operating system
                             <br/>
-
-                            <input width="80%" className="vb-img" type="image" src={vbDownloads}/>
-                            
+                            <input width="100%" className="post-img" type="image" src={vbDownloads}/>
                             <br/>
+                            
                             Once that is finished downloading, find the location of the file and open it up.
                             Next, you will see a window with four different options. Double click on the VirtualBox.pkg
                             <br/>
-
-                            <input width="80%" className="vb-img" type="image" src={vbInstall}/>
-
+                            <input width="100%" className="post-img" type="image" src={vbInstall}/>
                             <br/>
+
                             Now you should see a welcoming window, you can press continue here.
                             The rest is pretty intuitive so I won't go over any of that.
-                            <br/>
-
-                            <br/>
                             If you run into a problem during the installation, it may be due to your mac blocking your installation (Most likely a identification error). 
                             To fix this problem, open up your system preferences. Click on "Security & Privacy" and the General tab. 
                             You may see
@@ -114,15 +99,12 @@ export default function VM() {
 
                             <br/>
                             <figure class="quote">
-                                <blockquote>
-                                &#8220; system software from developer was blocked from loading &#8221;
-                                </blockquote>
+                                <blockquote>&#8220; system software from developer was blocked from loading &#8221;</blockquote>
                             </figure>
                             <br/>
                             Simply click allow and give it another go.
                             
-                            <br/>
-                            <input width="80%" className="vb-img" type="image" src={vbSecurity}/>
+                            <input width="100%" className="post-img" type="image" src={vbSecurity}/>
                             <br/>
 
                             <h3>Download Guest</h3>
@@ -152,9 +134,8 @@ export default function VM() {
                             <li>Settings (cmd-s) : Change your selected VM's settings</li>
                             <li>Discard : Discard machines saved state</li>
                             <li>Start : Start up your VM</li>
-                            <br/>
 
-                            <input width="90%" className="vb-img" type="image" src={vbMainScreen}/>
+                            <input width="100%" className="post-img" type="image" src={vbMainScreen}/>
 
                             <br/>
                             In order to create our VM click on the Blue Star like button (New).
@@ -162,7 +143,7 @@ export default function VM() {
                             where the VM will be stored, the type and version.
                             <br/>
 
-                            <input width="85%" className="vb-img" type="image" src={vbDescription}/>
+                            <input width="100%" className="post-img" type="image" src={vbDescription}/>
 
                             <br/>
                             Enter a descriptive name so the type and version fields to be autocompleted.
@@ -170,11 +151,13 @@ export default function VM() {
                             <br/>
 
                             <br/>
-                            <figure class="quote" style={{width:"26%"}}>
+                            <figure class="quote">
                                 <blockquote>
                                 &#8220; Ubuntu 20.04 &#8221;
                                 </blockquote>
                             </figure>
+
+
                             <br/>
 
                             Change the type and version accordingly if it did not auto complete
@@ -189,7 +172,7 @@ export default function VM() {
                             <br/>
                             <h3>Memory Size</h3>
 
-                            <input width="85%" className="vb-img" type="image" src={vbMemory}/>
+                            <input width="100%" className="post-img" type="image" src={vbMemory}/>
 
                             <br/>
                             The ratio of MB to GB is 1000:1 <br/>
@@ -204,7 +187,7 @@ export default function VM() {
                             <br/>
                             <h3>Hard Disk Options</h3>
 
-                            <input width="85%" className="vb-img" type="image" src={vbHardDisk}/>
+                            <input width="100%" className="post-img" type="image" src={vbHardDisk}/>
                             
                             <br/>
                             This window will prompt you with three options.
@@ -245,40 +228,41 @@ export default function VM() {
                             Personal Recommendation: 20-50GB;
                             <br/>
                             <br/>
-                            <hr/>
                         </p>
+
+                        <h2 className="post-subtitle">Change Virtual Machine's Settings</h2>
                         <p>
-                            <h2 className="post-subtitle">Change Virtual Machine's Settings</h2>
+
                             GREAT! You've created your first virtual machine. Now we just need to change some settings. 
                             <br/>
                             <br/>
                             <h3>System Tab</h3>
                             <br/>
-                            <input type="image" className="vb-img" width="85%" src={vbSystem}/>
+                            <input type="image" className="post-img" width="100%" src={vbSystem}/>
                             <br/>
                             The first thing we need to change is the amount of RAM your VM can use. We can do this by clicking on the Settings button. Clicking on the top System tab at the top and adjusting the Base Memory slider.
                             Normally I set this to 5 or 8 GB of RAM because I have 16 total GB of RAM. But this is really up to you and can be changed. Last thing on this section would be to uncheck the floppy disk.
                             <br/>
-                            <input type="image" className="vb-img" width="85%" src={vbCPU}/>
+                            <input type="image" className="post-img" width="100%" src={vbCPU}/>
                             <br/>
                             Another thing that could be changed is your processor. Virtual Box sets your CPU count to 1 which is good enough for the average user, but it wont hurt to change it.
                             <br/>
                             <br/>
                             <h3>Display Tab</h3>
-                            <input type="image" className="vb-img" width="85%" src={vbDisplay}/>
+                            <input type="image" className="post-img" width="100%" src={vbDisplay}/>
                             <br/>
                             Two things to change here. You want to enable 3D Acceleration and set the Video Memory to max. 
                             These are all the important things needed to be changed, the rest can be customized for your preference.
                             <br/>
                             <br/>
                             <h3>Storage Tab</h3>
-                            <input type="image" className="vb-img" width="85%" src={vbStorage}/>
+                            <input type="image" className="post-img" width="100%" src={vbStorage}/>
                             <br/>
                             One last thing. Remember that ISO file we downloaded? That was our guest OS and we need to link that to the virtual machine. 
                             This can be done by clicking on the option under <strong>Storage Devices</strong> - 
                             <br/>
                             <br/>
-                            <figure class="quote" style={{width:"26%"}}>
+                            <figure class="quote" >
                                 <blockquote>
                                 &#8220; O Empty &#8221;
                                 </blockquote>
@@ -295,9 +279,10 @@ export default function VM() {
 
                             <br/>
                         </p>
-                        <hr/>
+
+                        <h2 className="post-subtitle">Start it up</h2>
+
                         <p>
-                            <h2 className="post-subtitle">Start it up</h2>
                             FINALLY! We can finally click the start button. It's big, green, and looks like an arrow - can't miss it. <br/>
                             Give it some time as this is the first time your Virtual Machine is starting up. There are quite a few things needed to be done in order for your OS
                             to be up and running.
@@ -305,9 +290,10 @@ export default function VM() {
                             Once that is done loading, there will be a couple of things left to do. Like all operating systems, there will be a couple of settings to be changed. Such as the language, keyboard layout etc.
                             They are all quite user friendly and have many tutorials explaining how to get your OS setup. 
                         </p>
-                        <hr/>
+
+                        <h2 className="post-subtitle">Window resizing</h2>
+
                         <p>
-                            <h2 className="post-subtitle">Window resizing</h2>
                             One last thing before your all done. Try resizing your window. You may see that the screens size does not adjust to Virtual Box's window.
                             In order to fix this, if you have the Ubuntu OS installed you can click "Activities" at the top left. In the search bar type "Terminal" and click enter.
                             <br/>
@@ -327,9 +313,9 @@ export default function VM() {
                             After running these two commands, you can restart your VM by clicking (x) button on your virtual box window.
                             A popup should appear asking how you'd like to exit. Hit "power of machine" and "ok". Then start your VM back up again.
                         </p>
-                        <hr/>
+                        
+                        <h2 className="post-subtitle"> All Done!</h2>
                         <p>
-                            <h2 className="post-subtitle"> All Done!</h2>
                             If you have made it all the way down here, I hope you found use in my descriptive post on not only how to set up a virtual machine, but what it is and why you need it.
                         </p>
                     </div>
