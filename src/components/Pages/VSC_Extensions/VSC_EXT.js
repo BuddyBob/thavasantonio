@@ -133,7 +133,7 @@ export default function VSC_EXT() {
 
                     <h2 className='post-subtitle'>All Done</h2>
                     <p> 
-                        I hoped you enjoyed this post and were able to find a few new extensions for your VS Code workspace. 
+                        I hoped you enjoyed this post and were able to find a few new extensions for your VS Code workspace!
                     </p>
                 </div>
             </div>
