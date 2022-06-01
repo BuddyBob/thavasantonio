@@ -12,7 +12,6 @@ export default function Home() {
             <div className="banner-container">
                 <div className="inner-banner-container">
                     <h1>Thavas Antonio's Blog</h1>
-                    <h2>The Technology Space</h2>
                 </div>
             </div>
             {/* post cards */}
