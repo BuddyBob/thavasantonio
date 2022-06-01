@@ -61,7 +61,7 @@ export default function VM() {
                             There are many of these programs so to list a couple.
                             <br/>
                             <br/>
-                            <li><a className="link" href="https://www.zones.com/site/statics/static_page.html?name=partner/vmware/personal-desktop/workstation-player" target="_blank">VMware</a></li>
+                            <li><a className="link" href="https://www.zones.com/site/statics/static_page.html?name=partner/vmware/personal-desktop/workstation-player" target="_blank" rel="noreferrer">VMware</a></li>
                             <li>VirtualBox</li>
                             <li><a className="link" href="https://searchvirtualdesktop.techtarget.com/definition/Parallels">Parallels Desktop</a></li>
                             <li><a className="link" href="https://docs.citrix.com/en-us/citrix-hypervisor/technical-overview.html">Citrix Hypervisor</a></li>
@@ -77,7 +77,7 @@ export default function VM() {
                             <h3> Download & Install VirtualBox</h3>
                             <br/>
 
-                            Start by clicking on this link -{'>'} <a className="link" target="_blank" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
+                            Start by clicking on this link -{'>'} <a className="link" target="_blank" rel="noreferrer" ref="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
                             <br/>
                             Download your host's operating system
                             <br/>

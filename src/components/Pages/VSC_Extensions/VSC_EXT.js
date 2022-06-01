@@ -31,7 +31,7 @@ export default function VSC_EXT() {
                     <h2 className="post-subtitle">GitHub Copilot</h2>
                     <p>
                         <input width="100%" className="post-img" type="image" src={GitHubCopilot}/>
-                        While not fully open to the public yet, <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank"><u>GitHub Copilot</u></a> is definitely one the most useful and productive extensions out there. It's similar to Tabnine or Kite but is much more powerful.
+                        While not fully open to the public yet, <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noreferrer"><u>GitHub Copilot</u></a> is definitely one the most useful and productive extensions out there. It's similar to Tabnine or Kite but is much more powerful.
                         GitHub Copilot is powered by the OpenAI Codex AI system and trained on public internet text and billions of lines of code. What I found most useful is its ability to convert your logic (comments, function names) to code.
                         <br/>
                         <br/>
@@ -61,7 +61,7 @@ export default function VSC_EXT() {
                     <br/>
                     <p>
                         <input width="100%" className="post-img" type="image" src={MaterialIconTheme}/>
-                        With over 12.4 million installs, <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank"><u>Material Icon Theme</u></a> is a great extension that gives you a library of visually pleasing file icons to replace the ugly default ones.<br/><br/>
+                        With over 12.4 million installs, <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noreferrer" target="_blank"><u>Material Icon Theme</u></a> is a great extension that gives you a library of visually pleasing file icons to replace the ugly default ones.<br/><br/>
                         While this is not a productivity boost, it sure helps with organizations and makes working with big projects much more pleasing. 
                     </p>
 
@@ -72,7 +72,7 @@ export default function VSC_EXT() {
                             <blockquote>&#8220; After typing in the closing bracket of the opening tag, the closing tag will be inserted automatically. &#8221;</blockquote>
                         </figure>
                         <br/>
-                        Ever get tired of missing your closing tag and scrolling through your code in a desperate attempt to find the problem? Well  <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank"><u>Auto Close Tag</u></a> is here to help.
+                        Ever get tired of missing your closing tag and scrolling through your code in a desperate attempt to find the problem? Well  <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noreferrer" target="_blank"><u>Auto Close Tag</u></a> is here to help.
                         Auto Close Tag is an extremely helpful extension that speeds up your html writing process and helps prevent headaches. This is something I highly recommend installing.  
                     </p>
 
