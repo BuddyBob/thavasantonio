@@ -77,7 +77,7 @@ export default function VM() {
                             <h3> Download & Install VirtualBox</h3>
                             <br/>
 
-                            Start by clicking on this link -{'>'} <a className="link" target="_blank" rel="noreferrer" ref="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
+                            Start by clicking on this link -{'>'} <a className="link" target="_blank" rel="noreferrer" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
                             <br/>
                             Download your host's operating system
                             <br/>
@@ -107,7 +107,7 @@ export default function VM() {
                             <input width="100%" className="post-img" type="image" src={vbSecurity}/>
                             <br/>
 
-                            <h3>Download Guest</h3>
+                            <strong>Download Guest</strong>
 
                             <br/>
                             Now that we have VirtualBox installed, we need to invite a guest. 
