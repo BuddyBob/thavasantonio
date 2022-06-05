@@ -25,8 +25,9 @@ h1 {
 
 h2 {
   margin-top:20px;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 500;
+  color: var(--white);
 }
 
 strong{
@@ -155,6 +156,16 @@ p{
   width: 100%;
   color: var(--white);
 
+}
+
+@media screen and (max-width: 600px) {
+  .inner-banner-container{
+    text-align: center;
+    position: relative;
+    font-size: .8em;
+    width:75%;
+    margin:auto;
+  }
 }
 
 

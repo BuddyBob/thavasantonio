@@ -61,7 +61,7 @@ export default function VM() {
                             There are many of these programs so to list a couple.
                             <br/>
                             <br/>
-                            <li><a className="link" href="https://www.zones.com/site/statics/static_page.html?name=partner/vmware/personal-desktop/workstation-player" target="_blank" rel="noreferrer">VMware</a></li>
+                            <li><a className="link" href="https://www.zones.com/site/statics/static_page.html?name=partner/vmware/personal-desktop/workstation-player" target="_blank" rel="noopener noreferrer">VMware</a></li>
                             <li>VirtualBox</li>
                             <li><a className="link" href="https://searchvirtualdesktop.techtarget.com/definition/Parallels">Parallels Desktop</a></li>
                             <li><a className="link" href="https://docs.citrix.com/en-us/citrix-hypervisor/technical-overview.html">Citrix Hypervisor</a></li>
@@ -77,17 +77,17 @@ export default function VM() {
                             <h3> Download & Install VirtualBox</h3>
                             <br/>
 
-                            Start by clicking on this link -{'>'} <a className="link" target="_blank" rel="noreferrer" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
+                            Start by clicking on this link -{'>'} <a className="link" target="_blank" rel="noopener noreferrer" href="https://www.virtualbox.org/wiki/Downloads#:~:text=VirtualBox%206.1.26%20platform%20packages">VirtualBox Download</a>
                             <br/>
                             Download your host's operating system
                             <br/>
-                            <input width="100%" className="post-img" type="image" src={vbDownloads}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbDownloads}/>
                             <br/>
                             
                             Once that is finished downloading, find the location of the file and open it up.
                             Next, you will see a window with four different options. Double click on the VirtualBox.pkg
                             <br/>
-                            <input width="100%" className="post-img" type="image" src={vbInstall}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbInstall}/>
                             <br/>
 
                             Now you should see a welcoming window, you can press continue here.
@@ -104,7 +104,7 @@ export default function VM() {
                             <br/>
                             Simply click allow and give it another go.
                             
-                            <input width="100%" className="post-img" type="image" src={vbSecurity}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbSecurity}/>
                             <br/>
 
                             <strong>Download Guest</strong>
@@ -135,7 +135,7 @@ export default function VM() {
                             <li>Discard : Discard machines saved state</li>
                             <li>Start : Start up your VM</li>
 
-                            <input width="100%" className="post-img" type="image" src={vbMainScreen}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbMainScreen}/>
 
                             <br/>
                             In order to create our VM click on the Blue Star like button (New).
@@ -143,7 +143,7 @@ export default function VM() {
                             where the VM will be stored, the type and version.
                             <br/>
 
-                            <input width="100%" className="post-img" type="image" src={vbDescription}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbDescription}/>
 
                             <br/>
                             Enter a descriptive name so the type and version fields to be autocompleted.
@@ -172,7 +172,7 @@ export default function VM() {
                             <br/>
                             <h3>Memory Size</h3>
 
-                            <input width="100%" className="post-img" type="image" src={vbMemory}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbMemory}/>
 
                             <br/>
                             The ratio of MB to GB is 1000:1 <br/>
@@ -187,7 +187,7 @@ export default function VM() {
                             <br/>
                             <h3>Hard Disk Options</h3>
 
-                            <input width="100%" className="post-img" type="image" src={vbHardDisk}/>
+                            <input width="100%" className="post-img" type="image" alt="img" src={vbHardDisk}/>
                             
                             <br/>
                             This window will prompt you with three options.
@@ -238,25 +238,25 @@ export default function VM() {
                             <br/>
                             <h3>System Tab</h3>
                             <br/>
-                            <input type="image" className="post-img" width="100%" src={vbSystem}/>
+                            <input type="image" alt="img" className="post-img" width="100%" src={vbSystem}/>
                             <br/>
                             The first thing we need to change is the amount of RAM your VM can use. We can do this by clicking on the Settings button. Clicking on the top System tab at the top and adjusting the Base Memory slider.
                             Normally I set this to 5 or 8 GB of RAM because I have 16 total GB of RAM. But this is really up to you and can be changed. Last thing on this section would be to uncheck the floppy disk.
                             <br/>
-                            <input type="image" className="post-img" width="100%" src={vbCPU}/>
+                            <input type="image" alt="img" className="post-img" width="100%" src={vbCPU}/>
                             <br/>
                             Another thing that could be changed is your processor. Virtual Box sets your CPU count to 1 which is good enough for the average user, but it wont hurt to change it.
                             <br/>
                             <br/>
                             <h3>Display Tab</h3>
-                            <input type="image" className="post-img" width="100%" src={vbDisplay}/>
+                            <input type="image" alt="img" className="post-img" width="100%" src={vbDisplay}/>
                             <br/>
                             Two things to change here. You want to enable 3D Acceleration and set the Video Memory to max. 
                             These are all the important things needed to be changed, the rest can be customized for your preference.
                             <br/>
                             <br/>
                             <h3>Storage Tab</h3>
-                            <input type="image" className="post-img" width="100%" src={vbStorage}/>
+                            <input type="image" alt="img" className="post-img" width="100%" src={vbStorage}/>
                             <br/>
                             One last thing. Remember that ISO file we downloaded? That was our guest OS and we need to link that to the virtual machine. 
                             This can be done by clicking on the option under <strong>Storage Devices</strong> - 

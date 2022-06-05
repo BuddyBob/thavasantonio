@@ -30,8 +30,8 @@ export default function VSC_EXT() {
 
                     <h2 className="post-subtitle">GitHub Copilot</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={GitHubCopilot}/>
-                        While not fully open to the public yet, <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noreferrer"><u>GitHub Copilot</u></a> is definitely one the most useful and productive extensions out there. It's similar to Tabnine or Kite but is much more powerful.
+                        <input width="100%" className="post-img" type="image" alt="img" src={GitHubCopilot}/>
+                        While not fully open to the public yet, <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener noreferrer"><u>GitHub Copilot</u></a> is definitely one the most useful and productive extensions out there. It's similar to Tabnine or Kite but is much more powerful.
                         GitHub Copilot is powered by the OpenAI Codex AI system and trained on public internet text and billions of lines of code. What I found most useful is its ability to convert your logic (comments, function names) to code.
                         <br/>
                         <br/>
@@ -60,25 +60,25 @@ export default function VSC_EXT() {
                     <h2 className="post-subtitle">Material Icon Theme</h2>
                     <br/>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={MaterialIconTheme}/>
-                        With over 12.4 million installs, <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noreferrer" target="_blank"><u>Material Icon Theme</u></a> is a great extension that gives you a library of visually pleasing file icons to replace the ugly default ones.<br/><br/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={MaterialIconTheme}/>
+                        With over 12.4 million installs, <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noopener noreferrer" target="_blank"><u>Material Icon Theme</u></a> is a great extension that gives you a library of visually pleasing file icons to replace the ugly default ones.<br/><br/>
                         While this is not a productivity boost, it sure helps with organizations and makes working with big projects much more pleasing. 
                     </p>
 
                     <h2 className="post-subtitle">Auto Close</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={AutoCloseTag}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={AutoCloseTag}/>
                         <figure class="quote">
                             <blockquote>&#8220; After typing in the closing bracket of the opening tag, the closing tag will be inserted automatically. &#8221;</blockquote>
                         </figure>
                         <br/>
-                        Ever get tired of missing your closing tag and scrolling through your code in a desperate attempt to find the problem? Well  <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noreferrer" target="_blank"><u>Auto Close Tag</u></a> is here to help.
+                        Ever get tired of missing your closing tag and scrolling through your code in a desperate attempt to find the problem? Well  <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"  rel="noopener noreferrer" target="_blank"><u>Auto Close Tag</u></a> is here to help.
                         Auto Close Tag is an extremely helpful extension that speeds up your html writing process and helps prevent headaches. This is something I highly recommend installing.  
                     </p>
 
                     <h2 className="post-subtitle">Code Spell Checker</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={CodeSpellChecker}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={CodeSpellChecker}/>
                         Indians are generally good at spelling as the last 9 spelling bees in the US were won by Indians. 
                         However, I may be anomaly as I can't spell to save a life. Hence why I have Code Spell Checker installed.<br/><br/>
                         With spelling mistakes appearing everywhere, this extensions recognizes these errors and provides possible solutions as a Quick Fix ( cmd + .)
@@ -87,7 +87,7 @@ export default function VSC_EXT() {
 
                     <h2 className="post-subtitle">Banner Comments</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={BannerComments}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={BannerComments}/>
                         Banner Comments is a treasure of an extension. While it may be a very small add-on, it can be so helpful; Banner Comments creates big and prominent comments in your code
                         to help categorize certain sections. <br/><br/>
 
@@ -96,14 +96,14 @@ export default function VSC_EXT() {
                         <br/>
                         Example:
                         <br/>
-                        <input width="100%" className="post-img" type="image" src={BannerCommentExample}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={BannerCommentExample}/>
                         <br/>
                         Quite often, I find myself using these comments as they help me keep track of where everything is while scrolling through large files. 
                     </p>
                     
                     <h2 className="post-subtitle">CSG</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={CSG}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={CSG}/>
                         Now of course I have to include my own extension in this list. CSG is a class snippet generator which pretty much makes creating a class template seamless. 
                         One down side is this only works in Python but I will be updating it soon to support multiple languages.
                         <br/><br/>
@@ -124,11 +124,11 @@ export default function VSC_EXT() {
 
                     <h2 className="post-subtitle">Polacode</h2>
                     <p>
-                        <input width="100%" className="post-img" type="image" src={Polacode}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={Polacode}/>
                         💰 One dollar says you were wondering how I got that clean screenshot of "HELLO" in the Banner Comments sections. Well, I used Polacode. This extensions may not be a productivity booster,
                         but it sure helps share my code in a clean way without all the extra buttons Visual Studio Code offers. 
                         <br/>
-                        <input width="100%" className="post-img" type="image" src={PolacodeExample}/>
+                        <input width="100%" className="post-img" type="image" alt="img" src={PolacodeExample}/>
                     </p>
 
                     <h2 className='post-subtitle'>All Done</h2>

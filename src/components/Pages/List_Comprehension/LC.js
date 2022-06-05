@@ -10,7 +10,7 @@ export default function LC(){
         <div className="post-container">
             <div className="post-inner">
                 <div className="content">
-                    <h1 className="post-title"> I ❤️ List Comprehension </h1>
+                    <h1 className="post-title"> I <span role="img" aria-label="heart">❤️</span> List Comprehension </h1>
                         <h2 className="post-subtitle">Lists</h2>
                         <p> 
                             If you've been programming in Python for a while, you've undoubtedly encountered the fundamental python feature <strong> List </strong>. 
