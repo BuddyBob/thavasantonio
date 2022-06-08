@@ -5,13 +5,10 @@ import SubscribePopup from './Subscribe/Subscribe';
 import "./NavBar.css"
 
 
-export const SubscribeContext = createContext();
+export const SubscribeContext = createContext()
 export default function NavBar() {
     const [subscribePop, setSubscribePop] = useState(false);
 
-    function handleSubscribe() {
-        setSubscribePop(true);
-    }
     return (
         <div>
             <header>
@@ -21,12 +18,11 @@ export default function NavBar() {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/links">Links</Link></li>
+                        
                         <SubscribeContext.Provider value={{ setSubscribePop }}>
-                            {subscribePop ? <SubscribePopup /> : null}
-                            {!subscribePop ? <input type="submit" value="Subscribe" class="subscribe" onClick={ () => handleSubscribe()}/>: null}
-
-
+                            {subscribePop ? <SubscribePopup /> : <input type="submit" value="Subscribe" class="subscribe" onClick={ () => setSubscribePop(true)}/>}
                         </SubscribeContext.Provider>
+
                     </ul>
                 </nav>
             </header>

@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { createContext, useState }  from 'react'
 import Card from './components//Cards/Card'
 import NavBar from './components/NavBar/NavBar'
-
+import Alert  from '@mui/lab/Alert';
+import Snackbar from '@mui/material/Snackbar';
+import Slide from "@material-ui/core/Slide";
+export const AppContext = createContext();
 export default function Home() {
+    const [error, setError] = useState(false);
     return (
         <div>
             {/* nav bar */}
@@ -23,7 +27,21 @@ export default function Home() {
                     <Card className="card" date="May 23 2022" link="vscode-extensions" title="Mi Favorito VS Code Extensiones " description="Visual Studio Code is a very powerful code editor. Here are my favorite extensions I use to improve productivity."/>
                 </div>
             </div>
+ 
+            <AppContext.Provider value={{error, setError}}>
+            {error ? <div style={{ willChange: "transform" }}>
+            <Snackbar className="error-popup" 
+                TransitionComponent={props => <Slide {...props} direction="right" />}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                open={true} autoHideDuration={5000} 
+                onClose={() => setError(false)}>
+                <Alert onClose={() => setError(false)} severity="error" sx={{ width: '100%' }}>
+                Check your email
+                </Alert>
 
+            </Snackbar>
+            </div> : null}
+            </AppContext.Provider>
         </div>
     )
 }
