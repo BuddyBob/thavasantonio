@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBar from '../../NavBar'
-import CodeBlock from '../../CodeBlock'
+import NavBar from '../../../NavBar/NavBar'
+import CodeBlock from '../../../CodeBlock'
 
 
 export default function LC(){

@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../../NavBar'
+import NavBar from '../../NavBar/NavBar'
 import Github from '../../../assets/Links/Github.png'
 import SO from '../../../assets/Links/SO.svg'
 import Spotify from '../../../assets/Links/Spotify.svg'
@@ -12,7 +12,7 @@ export default function Links(){
 			<div className="banner-container">
 				<div className="inner-banner-container">
 					<h1>Links</h1>
-			 </div>
+				</div>
 			</div>
 
 

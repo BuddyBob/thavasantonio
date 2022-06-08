@@ -19,6 +19,8 @@ body {
   background: var(--background-color);
 }
 
+
+
 h1 {
   font-size: 3em;
 
@@ -34,6 +36,7 @@ h2 {
 strong{
   font-family: "Poppins", "Fira Mono", sans-serif;
 }
+
 
 
 
@@ -152,12 +155,14 @@ p{
 }
 
 .inner-banner-container {
+  /* display: flex; */
   text-align: center;
   position: relative;
   width: 100%;
   color: var(--white);
 
 }
+
 
 @media screen and (max-width: 600px) {
   .inner-banner-container{

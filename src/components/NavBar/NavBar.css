@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');w
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 li, a{
     font-family: "Fira Mono", sans-serif;
@@ -11,7 +11,7 @@ header {
     justify-content:flex-end;
     align-items:center;
     padding:26px 5%;
-    background-color:rgba(255, 255, 255, 0.03)
+    background-color:rgb(51,52,54)
 }
 
 .logo{
@@ -36,4 +36,27 @@ header {
 
 .nav-link-container li a:hover{
     color:var(--highlight-color)
+}
+
+.subscribe {
+	background-color: var(--highlight-color);
+	font-family: "Fira Mono", sans-serif;
+	padding: 8px 15px;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	color: var(--text-color);
+	outline: none;
+	border: none;
+	transition: 0.3s linear;
+    margin-left:20px;
+}
+
+@media screen and (max-width: 800px) {
+    .subscribe {
+        padding: 0px;
+        background-color:rgb(51,52,54);
+        margin-left:10px;
+    }
+    
 }
