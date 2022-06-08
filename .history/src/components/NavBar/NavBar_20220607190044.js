@@ -23,7 +23,8 @@ export default function NavBar() {
                         <li><Link to="/links">Links</Link></li>
                         <SubscribeContext.Provider value={{ setSubscribePop }}>
                             {subscribePop ? <SubscribePopup /> : null}
-                            {!subscribePop ? <input type="submit" value="Subscribe" class="subscribe" onClick={ () => handleSubscribe()}/>: null}
+                            {console.log(subscribePop)}
+                            {subscribePop ? <input type="submit" value="Subscribe" class="subscribe" onClick={ () => handleSubscribe()}/>: null}
 
 
                         </SubscribeContext.Provider>

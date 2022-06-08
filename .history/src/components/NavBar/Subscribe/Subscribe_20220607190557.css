@@ -1,0 +1,71 @@
+.subscribePopup{
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background-color: rgb(51,52,54);
+    border-radius: 20px;
+    padding: 50px;
+    z-index: 2;
+  }
+  
+  .subscribeTitle{
+    position: relative;
+    font-size: 1.6em;
+    color: var(--white);
+    left:20px;
+  }
+  
+
+  .subscribeInput{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: var(--border-color) 3px solid;
+    border-radius:8px;
+    padding:10px;
+    margin-top:40px;
+    color: var(--text-color);
+  }
+  
+  /* make .subscribeEmailContainer flex columns */
+.subscribeEmailContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left:25%;
+}
+
+.error-popup{
+    position: absolute;
+    left:60%;
+}
+
+
+/* put submitEmail on right side of subscribeInput */
+.submitEmail{
+    position: relative;
+    margin-left: 30px;
+    font-size: 1.4em;
+    top:20px;
+    color: var(--highlight-color);
+}
+  
+  .close{
+    position: absolute;
+    bottom: 170px;
+    left: 92%;
+    width: 30px;
+    font-size:1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .subscribeInput:focus{
+    outline: none;
+  }
+  
