@@ -22,8 +22,12 @@ export default function NavBar() {
                         {(() => {
                         if (localStorage.getItem('signedIn')) {
                         return (
+
+
                             <input type="submit" value="Subscribed" class="subscribed"/>
-                        )
+                            
+                        
+                            )
                         } else if (subscribePop) {
                         return (
                             <SubscribePopup />
