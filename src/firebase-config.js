@@ -23,9 +23,9 @@ export const signInWithGoogle = () => {
     .then((result) => {
         const user = result.user.displayName;
         const email = result.user.email;
-
         localStorage.setItem('user', user);
         localStorage.setItem('email', email);
+        localStorage.setItem('signedIn', true);
 
         //add user and email with unique id to database
         db.collection('users').doc(result.user.uid).set({

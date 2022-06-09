@@ -1,6 +1,5 @@
 import React, { createContext, useState }  from 'react'
 import { Link } from 'react-router-dom'
-import { signInWithGoogle } from '../../firebase-config';
 import SubscribePopup from './Subscribe/Subscribe';
 import "./NavBar.css"
 
@@ -20,7 +19,21 @@ export default function NavBar() {
                         <li><Link to="/links">Links</Link></li>
                         
                         <SubscribeContext.Provider value={{ setSubscribePop }}>
-                            {subscribePop ? <SubscribePopup /> : <input type="submit" value="Subscribe" class="subscribe" onClick={ () => setSubscribePop(true)}/>}
+                        {(() => {
+                        if (localStorage.getItem('signedIn')) {
+                        return (
+                            <input type="submit" value="Subscribed" class="subscribed"/>
+                        )
+                        } else if (subscribePop) {
+                        return (
+                            <SubscribePopup />
+                        )
+                        } else if (!subscribePop && !localStorage.getItem('signedIn')) {
+                        return (
+                            <input type="submit" value="Subscribe" class="subscribe" onClick={ () => setSubscribePop(true)}/>
+                        )
+                        }
+                        })()}
                         </SubscribeContext.Provider>
 
                     </ul>

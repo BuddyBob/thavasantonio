@@ -52,6 +52,20 @@ header {
     margin-left:20px;
 }
 
+.subscribed{
+    background-color: #14e82d;
+	font-family: "Fira Mono", sans-serif;
+	padding: 8px 15px;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	color: var(--text-color);
+	outline: none;
+	border: none;
+	transition: 0.3s linear;
+    margin-left:20px;
+}
+
 @media screen and (max-width: 800px) {
     .subscribe {
         padding: 0px;

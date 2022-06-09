@@ -1,6 +1,6 @@
 .subscribePopup{
     position: absolute;
-    top: 230px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 450px;
@@ -8,6 +8,7 @@
     border-radius: 20px;
     padding: 50px;
     z-index: 2;
+    box-shadow: #181818 0px 0px 20px;
   }
   
   .subscribeTitle{
@@ -51,6 +52,19 @@
     top:20px;
     color: var(--highlight-color);
 }
+
+.submitEmail:hover{
+    color: var(--grey-color);
+    cursor: pointer;
+}
+
+.google-signin-btn{
+  position: relative;
+  left: 19%;
+  top:20px;
+  margin-top:10px;
+}
+
   
   .close{
     position: absolute;
