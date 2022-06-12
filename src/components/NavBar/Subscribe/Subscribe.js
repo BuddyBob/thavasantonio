@@ -2,17 +2,11 @@ import React, { useContext, useState } from 'react'
 import { IoClose, IoArrowForward } from 'react-icons/io5'
 import { SubscribeContext } from '../NavBar'
 import { db } from '../../../firebase-config'
-import { Alert } from '@mui/material'
-import Snackbar from '@mui/material/Snackbar';
-import Slide from "@material-ui/core/Slide";
+import { useAlert } from "react-alert";
 import './Subscribe.css'
-import GoogleButton from 'react-google-button'
-import { signInWithGoogle } from '../../../firebase-config'
 
-export default function SubscribePopup() {
+export default function SubscribePopup(props) {
     const { setSubscribePop } = useContext(SubscribeContext);
-    const [error, setError] = useState(false)
-    const [validateEmail, setValidateEmail] = useState(false);
     const [text, setText] = useState("");
 
     function handleChange(e) {
@@ -24,49 +18,51 @@ export default function SubscribePopup() {
         // email validation
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if (!regex.test(text)){
-            setError(true);
+            alert("Please enter a valid email address")
         }
         else{
-            console.log("hello")
-            db.collection('users').doc().set({
-                email: text,
-                user: "N/A"
-            })
-            setValidateEmail(true); 
-            setSubscribePop(false);
-            localStorage.setItem('signedIn', true);
+            // subscribed
+            if (props.subscribe){
+                console.log("hello")
+                db.collection('users').doc().set({
+                    email: text,
+                    user: "N/A"
+                })
+                setSubscribePop(false);
+                localStorage.setItem('signedIn', true);
+            
+            }
+            // unsubscribed
+            else{
+                var user = db.collection('users').where('email','==',text);
+                user.get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    doc.ref.delete();
+                });
+                }).catch(function(error) {
+                console.log("Error getting documents: ", error);
+                });
+                setSubscribePop(false);
+                localStorage.setItem('signedIn', false);
+            }
         }
     }
 
     return (
         <div>
-            {validateEmail ? 
-            <div>
-            </div> 
-            : null}
-            
-            {error ? <div style={{ willChange: "transform" }}>
-            <Snackbar className="error-popup" 
-                TransitionComponent={props => <Slide {...props} direction="up" />}
-                anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
-                open={true} autoHideDuration={7000} 
-                onClose={() => setError(false)}>
 
-                <Alert onClose={() => setError(false)} severity="error" sx={{ width: '100%' }}>
-                Check your email
-                </Alert>
-
-            </Snackbar>
-            </div> : null}
 
             <div className="subscribePopup">
                 <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setSubscribePop(false)} type="image"/> 
-                <h1 className="subscribeTitle">Enter Email or Use Google</h1>
+                <h1 className="subscribeTitle">{props.title}</h1>
+
                 <form onSubmit={(e) => handleSubmit(e)} className="subscribeEmailContainer">
                     <input className="subscribeInput" type="text" onChange={handleChange} placeholder="Email" onFocus={(event) => event.target.select()}/>
                     <IoArrowForward className="submitEmail" type="image" onClick={ (e) => handleSubmit(e)}/>
                 </form>
-                <GoogleButton className="google-signin-btn" onClick={() => {signInWithGoogle();}}/>
+
+
+                {/* <GoogleButton className="google-signin-btn" onClick={() => {setSubscribePop(false); signInWithGoogle()}}/> */}
             </div>
         </div>
     )

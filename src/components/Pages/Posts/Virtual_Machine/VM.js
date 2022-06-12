@@ -98,7 +98,7 @@ export default function VM() {
                             <br/>
 
                             <br/>
-                            <figure class="quote">
+                            <figure className="quote">
                                 <blockquote>&#8220; system software from developer was blocked from loading &#8221;</blockquote>
                             </figure>
                             <br/>
@@ -151,7 +151,7 @@ export default function VM() {
                             <br/>
 
                             <br/>
-                            <figure class="quote">
+                            <figure className="quote">
                                 <blockquote>
                                 &#8220; Ubuntu 20.04 &#8221;
                                 </blockquote>
@@ -262,7 +262,7 @@ export default function VM() {
                             This can be done by clicking on the option under <strong>Storage Devices</strong> - 
                             <br/>
                             <br/>
-                            <figure class="quote" >
+                            <figure className="quote" >
                                 <blockquote>
                                 &#8220; O Empty &#8221;
                                 </blockquote>

@@ -68,7 +68,7 @@ export default function VSC_EXT() {
                     <h2 className="post-subtitle">Auto Close</h2>
                     <p>
                         <input width="100%" className="post-img" type="image" alt="img" src={AutoCloseTag}/>
-                        <figure class="quote">
+                        <figure className="quote">
                             <blockquote>&#8220; After typing in the closing bracket of the opening tag, the closing tag will be inserted automatically. &#8221;</blockquote>
                         </figure>
                         <br/>

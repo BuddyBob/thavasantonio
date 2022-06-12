@@ -38,6 +38,8 @@ header {
     color:var(--highlight-color)
 }
 
+
+
 .subscribe {
 	background-color: var(--highlight-color);
 	font-family: "Fira Mono", sans-serif;
@@ -46,31 +48,40 @@ header {
 	font-size: 20px;
 	cursor: pointer;
 	color: var(--text-color);
-	outline: none;
-	border: none;
 	transition: 0.3s linear;
-    margin-left:20px;
+    border: var(--highlight-color) 2px solid; 
+
 }
 
+
+
 .subscribed{
-    background-color: #75da3f;
+    background-color:rgb(51,52,54);
 	font-family: "Fira Mono", sans-serif;
-	padding: 8px 15px;
-	border-radius: 5px;
-	font-size: 20px;
+    border-radius: 100px;
 	cursor: pointer;
 	color: var(--text-color);
 	outline: none;
-	border: none;
-	transition: 0.3s linear;
-    margin-left:20px;
+    border: var(--highlight-color) 2px solid; 
+    width: 65px;
+    height: 45px;
+    padding-right:16px;
+    position: relative;
+    right:0px;
 }
 
-@media screen and (max-width: 800px) {
+.subscribed-check{
+    position: relative;
+    right:33px;
+    top:5px;
+    color: rgb(83, 229, 83);
+}
+
+
+@media screen and (max-width: 700px) {
     .subscribe {
-        padding: 0px;
+        padding: 1px;
         background-color:rgb(51,52,54);
-        margin-left:10px;
     }
     
 }

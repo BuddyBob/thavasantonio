@@ -23,8 +23,6 @@ export const signInWithGoogle = () => {
     .then((result) => {
         const user = result.user.displayName;
         const email = result.user.email;
-        localStorage.setItem('user', user);
-        localStorage.setItem('email', email);
         localStorage.setItem('signedIn', true);
 
         //add user and email with unique id to database
@@ -32,6 +30,7 @@ export const signInWithGoogle = () => {
             user: user,
             email: email
         })
+
     })
     .catch(error => console.log(error));
 }

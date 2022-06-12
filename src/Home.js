@@ -4,9 +4,8 @@ import NavBar from './components/NavBar/NavBar'
 
 
 
-export const AppContext = createContext();
 export default function Home() {
-    const [signedIn, setSignedIn] = useState(localStorage.getItem('signedIn'));
+    localStorage.setItem('signedIn', true);
     return (
         <div>
             {/* nav bar */}
@@ -28,7 +27,6 @@ export default function Home() {
                 </div>
             </div>
  
-            <AppContext.Provider value={{signedIn, setSignedIn}}/>
 
         </div>
     )
