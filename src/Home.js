@@ -5,7 +5,6 @@ import NavBar from './components/NavBar/NavBar'
 
 
 export default function Home() {
-    localStorage.setItem('signedIn', true);
     return (
         <div>
             {/* nav bar */}

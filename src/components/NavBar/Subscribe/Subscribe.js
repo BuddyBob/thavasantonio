@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { IoClose, IoArrowForward } from 'react-icons/io5'
 import { SubscribeContext } from '../NavBar'
+import { UnsubscribeContext } from './Unsubscribe'
 import { db } from '../../../firebase-config'
 import { useAlert } from "react-alert";
 import './Subscribe.css'
 
 export default function SubscribePopup(props) {
+    const { setUnsubscribePop } = useContext(UnsubscribeContext);
     const { setSubscribePop } = useContext(SubscribeContext);
     const [text, setText] = useState("");
 
@@ -42,18 +44,19 @@ export default function SubscribePopup(props) {
                 }).catch(function(error) {
                 console.log("Error getting documents: ", error);
                 });
-                setSubscribePop(false);
+                setUnsubscribePop(false);
+                window.location.reload(false);
                 localStorage.setItem('signedIn', false);
             }
         }
     }
-
     return (
         <div>
 
 
             <div className="subscribePopup">
-                <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setSubscribePop(false)} type="image"/> 
+                {props.subscribe ? <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setSubscribePop(false)} type="image"/> 
+                : <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setUnsubscribePop(false)} type="image"/>}
                 <h1 className="subscribeTitle">{props.title}</h1>
 
                 <form onSubmit={(e) => handleSubmit(e)} className="subscribeEmailContainer">

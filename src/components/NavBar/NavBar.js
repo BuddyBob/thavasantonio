@@ -21,7 +21,6 @@ export default function NavBar() {
                         
                         <SubscribeContext.Provider value={{ setSubscribePop }}>
                             {(() => {
-                            console.log(localStorage.getItem('signedIn'), subscribePop)
                             //if signed in, show subbed button (unsubscribe option)
                             if (localStorage.getItem('signedIn') === "true") {
                             return (                                
