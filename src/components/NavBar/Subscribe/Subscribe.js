@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { IoClose, IoArrowForward } from 'react-icons/io5'
-import { SubscribeContext } from '../NavBar'
+import { SubscribeContext } from '../NavLinks'
 import { UnsubscribeContext } from './Unsubscribe'
 import { db } from '../../../firebase-config'
 import { useAlert } from "react-alert";
