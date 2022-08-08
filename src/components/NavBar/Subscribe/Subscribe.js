@@ -1,53 +1,39 @@
 import React, { useContext, useState } from 'react'
 import { IoClose, IoArrowForward } from 'react-icons/io5'
 import { SubscribeContext } from '../NavLinks'
-import { UnsubscribeContext } from './Unsubscribe'
-import { db } from '../../../firebase-config'
-import { useAlert } from "react-alert";
+import { db,logInWithEmailAndPassword, registerWithEmailAndPassword } from '../../../firebase-config'
 import './Subscribe.css'
 
 export default function SubscribePopup(props) {
-    const { setUnsubscribePop } = useContext(UnsubscribeContext);
     const { setSubscribePop } = useContext(SubscribeContext);
-    const [text, setText] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    function handleChange(e) {
-        setText(e.target.value);
-    }
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
         // email validation
         const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        if (!regex.test(text)){
-            alert("Please enter a valid email address")
+        if (!regex.test(email) || password.length <= 6) {
+            alert("Check your email or password (6+ chars)")
         }
         else{
             // subscribed
-            if (props.subscribe){
-                console.log("hello")
-                db.collection('users').doc().set({
-                    email: text,
-                    user: "N/A"
+            db.collection("users").where("email", "==", email)
+                .get()
+                .then((querySnapshot) => {
+                    if (querySnapshot.size > 0){
+
+                        logInWithEmailAndPassword(email, password)
+                        localStorage.setItem('signedIn', true);
+                        setSubscribePop(false);
+                    }
+                    else{
+                        registerWithEmailAndPassword(email, password)
+                        localStorage.setItem('signedIn', true);
+                        setSubscribePop(false);
+                    }
                 })
-                setSubscribePop(false);
-                localStorage.setItem('signedIn', true);
-            
-            }
-            // unsubscribed
-            else{
-                var user = db.collection('users').where('email','==',text);
-                user.get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                    doc.ref.delete();
-                });
-                }).catch(function(error) {
-                console.log("Error getting documents: ", error);
-                });
-                setUnsubscribePop(false);
-                window.location.reload(false);
-                localStorage.setItem('signedIn', false);
-            }
         }
     }
     return (
@@ -55,17 +41,14 @@ export default function SubscribePopup(props) {
 
 
             <div className="subscribePopup">
-                {props.subscribe ? <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setSubscribePop(false)} type="image"/> 
-                : <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setUnsubscribePop(false)} type="image"/>}
+                <IoClose aria-label="close button" className="class-btn close" style={{color: "white"}} onClick={() => setSubscribePop(false)} type="image"/> 
                 <h1 className="subscribeTitle">{props.title}</h1>
 
-                <form onSubmit={(e) => handleSubmit(e)} className="subscribeEmailContainer">
-                    <input className="subscribeInput" type="text" onChange={handleChange} placeholder="Email" onFocus={(event) => event.target.select()}/>
-                    <IoArrowForward className="submitEmail" type="image" onClick={ (e) => handleSubmit(e)}/>
+                <form onSubmit={handleSubmit} className="subscribeAuthContainer">
+                    <input className="subscribeInput" type="text" onChange={e => setEmail(e.target.value)} placeholder="Email" onFocus={(event) => event.target.select()}/>
+                    <input className="subscribeInput" type="text" onChange={e => setPassword(e.target.value)} placeholder="Password" onFocus={(event) => event.target.select()}/>
+                    <IoArrowForward className="submitAuth" type="image" onClick={handleSubmit}/>
                 </form>
-
-
-                {/* <GoogleButton className="google-signin-btn" onClick={() => {setSubscribePop(false); signInWithGoogle()}}/> */}
             </div>
         </div>
     )

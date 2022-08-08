@@ -144,10 +144,3 @@ header {
 }
 
 
-@media screen and (max-width: 700px) {
-    .subscribe {
-        padding: 1px;
-        background-color:rgb(51,52,54);
-    }
-    
-}

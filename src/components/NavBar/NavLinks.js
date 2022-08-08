@@ -31,7 +31,7 @@ export default function Navlinks() {
                     )
                 } 
                 //if subscribe popup not showing and not signed in, show subscribe button
-                else if (subscribePop == false && localStorage.getItem('signedIn') !== "true") {
+                else if (subscribePop === false && localStorage.getItem('signedIn') !== "true") {
                     
                     return (
                         <li>

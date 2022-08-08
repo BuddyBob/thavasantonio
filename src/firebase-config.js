@@ -1,5 +1,5 @@
 import firebase from 'firebase/compat/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, } from 'firebase/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
@@ -17,8 +17,7 @@ export let db = firebase.firestore();
 
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider()
-
-export default function  signInWithGoogle(){
+export function  signInWithGoogle(){
     signInWithPopup(auth, provider)
     .then((result) => {
         const user = result.user.displayName;
@@ -36,3 +35,19 @@ export default function  signInWithGoogle(){
 }
 
 
+export async function registerWithEmailAndPassword(email, password){
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      const user = res.user;
+      console.log('register')
+      await db.collection('users').doc(user.uid).set({
+        uid: user.uid,
+        authProvider: "local",
+        email,
+      }).catch(error => console.log(error));
+  };
+
+
+  export async function logInWithEmailAndPassword(email, password){
+    console.log('log in')
+      await signInWithEmailAndPassword(auth, email, password).catch(error => console.log(error));
+  };

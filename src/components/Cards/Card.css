@@ -13,12 +13,15 @@ body .card-container {
 body .card-container .card {
   position: relative;
   min-width: 390px;
+  max-width: 390px;
   height: 500px;
   border-radius: 15px;
   margin: 40px;
   transition: 0.5s;
   bottom:50px;
 }
+
+
 
 
 
@@ -34,11 +37,10 @@ body .card-container .card .box {
   align-items: center;
   overflow: hidden;
   transition: 0.2s;
-  background: rgba(255, 255, 255, 0.03);
   box-shadow: #181818 0px 0px 20px;
 }
 
-body .card-container .card .box:hover {
+body .card-container .card:hover {
   transform: translateY(-20px);
 }
 
@@ -95,3 +97,33 @@ body .card-container .card .box .content .description p {
   background: var(--text-color);
   color: #000;
 }
+
+
+
+.preview-card-image-icon{
+  font-size: 2em;
+  position: relative;
+  left:85%;
+  top:80%;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  color: var(--text-color);
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+.preview-card-image-input{
+  opacity: 1;
+  position: absolute;
+  z-index: -1;
+  width:200px;
+}
+
+/* body .card-container-inner{
+  display: flex;
+  flex-direction: column;
+} */

@@ -1,7 +1,7 @@
 import React, { useState, createContext } from 'react'
 import { Menu, MenuItem, ClickAwayListener } from '@mui/material/';
+import { db, auth } from '../../../firebase-config'
 import { IoCheckmark } from 'react-icons/io5'
-import SubscribePopup from './Subscribe';
 import "../NavBar.css"
 
 
@@ -9,7 +9,25 @@ export const UnsubscribeContext = createContext({"unsubscribePop":false, "setUns
 export default function Unsubscribe() {
     const [anchorEl, setAnchorEl] = useState(null);
     const [open, setOpen] = useState(false);
-    const [unsubscribePop, setUnsubscribePop] = useState(false);
+    function unsubscribe() {
+        localStorage.setItem('signedIn', false);
+        const userAuth = auth.currentUser;
+        userAuth.delete().then(() => {
+            console.log("Deleted user");
+        }).catch((error) => {
+            console.log("Error deleting user:", error);
+        });
+
+        var user = db.collection('users').where('email','==',userAuth.email);
+        user.get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            doc.ref.delete();
+        });
+        }).catch(function(error) {
+        console.log("Error getting documents: ", error);
+        });
+        // window.location.reload();
+    }
     function handleOpen(e){
         setOpen(true);
         setAnchorEl(e.currentTarget);
@@ -40,13 +58,10 @@ export default function Unsubscribe() {
                     onClose={() => handleClose()}
                     MenuListProps={{ onMouseLeave: handleClose }}
                 >
-                    <MenuItem onClick={() => setUnsubscribePop(true)}>Unsubscribe</MenuItem>
+                    <MenuItem onClick={() => unsubscribe()}>Unsubscribe</MenuItem>
                 </Menu>
             </ClickAwayListener>
             {/* if clicked on unsubscribe, show popup to remove user */}
-            <UnsubscribeContext.Provider value={{ setUnsubscribePop }}>
-                {unsubscribePop && <SubscribePopup title="Unsubscribe" subscribe={false}/>}
-            </UnsubscribeContext.Provider>
         </div>
     )
 }

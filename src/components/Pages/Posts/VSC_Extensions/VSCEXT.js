@@ -11,7 +11,7 @@ import Polacode from '../../../../assets/VSC_Extensions/Polacode.png'
 import PolacodeExample from '../../../../assets/VSC_Extensions/PolacodeExample.png'
 import CSG from '../../../../assets/VSC_Extensions/CSG.png'
 
-export default function VSC_EXT() {
+export default function VSCEXT() {
   return (
     <div>
         <NavBar/>
