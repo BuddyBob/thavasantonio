@@ -107,6 +107,7 @@ body .post-container .post-inner {
 
 .link:hover{
   color:var(--highlight-color);
+  cursor: pointer;
 }
 
 p{
