@@ -119,8 +119,10 @@ body .card-container .card .box .content .description p {
 .preview-card-image-input{
   opacity: 1;
   position: absolute;
-  z-index: -1;
-  width:200px;
+  z-index: 1;
+  width:300px;
+  top:20px;
+  left:30px
 }
 
 /* body .card-container-inner{

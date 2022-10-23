@@ -1,15 +1,15 @@
-import React from 'react'
-import NavBar from '../../../NavBar/NavBar'
-import CodeBlock from '../../../CodeBlock'
 import AutoCloseTag from '../../../../assets/VSC_Extensions/AutoCloseTag.png'
+import BannerCommentExample from '../../../../assets/VSC_Extensions/BannerCommentExample.png'
+import BannerComments from '../../../../assets/VSC_Extensions/BannerComments.png'
+import CSG from '../../../../assets/VSC_Extensions/CSG.png'
+import CodeBlock from '../../../CodeBlock'
+import CodeSpellChecker from '../../../../assets/VSC_Extensions/CodeSpellChecker.png'
 import GitHubCopilot from '../../../../assets/VSC_Extensions/GitHubCopilot.png'
 import MaterialIconTheme from '../../../../assets/VSC_Extensions/MaterialIconTheme.png'
-import CodeSpellChecker from '../../../../assets/VSC_Extensions/CodeSpellChecker.png'
-import BannerComments from '../../../../assets/VSC_Extensions/BannerComments.png'
-import BannerCommentExample from '../../../../assets/VSC_Extensions/BannerCommentExample.png'
+import NavBar from '../../../NavBar/NavBar'
 import Polacode from '../../../../assets/VSC_Extensions/Polacode.png'
 import PolacodeExample from '../../../../assets/VSC_Extensions/PolacodeExample.png'
-import CSG from '../../../../assets/VSC_Extensions/CSG.png'
+import React from 'react'
 
 export default function VSCEXT() {
   return (
@@ -18,7 +18,7 @@ export default function VSCEXT() {
         <div className="post-container">
             <div className="post-inner">
                 <div className="content">
-                    <h1 className="post-title">Mi Favorito <br/> VS Code Extensiones </h1>
+                    <h1 className="post-title">My Favorite <br/> VS Code Extensiones </h1>
                     <h2 className="post-subtitle">Visual Studio Code</h2>
                     <p>
                         I've been using Visual Studio Code for two years now after migrating from Sublime Text.

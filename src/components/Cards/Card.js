@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { IoImage } from 'react-icons/io5'
-import Github from '../../assets/Links/Github.png'
+// import Github from '../../assets/Links/Github.png'
 import './Card.css'
+
+import React, { useState } from 'react'
+
+import { IoImage } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 export default function Card(props) {
     const [preview, setPreview] = useState(false)
     return (
