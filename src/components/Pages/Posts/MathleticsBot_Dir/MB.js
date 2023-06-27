@@ -11,8 +11,8 @@ export default function MB(){
             <div className="post-container">
                 <div className="post-inner">
                     <div className="content">
-                        <h1 className="post-title"> Mathletics Bot, a Homework Buddy </h1>
-                            <h2 className="post-subtitle">What The Heck? <input type="image" width="40px" src={gHub} alt="GitHub" className="github-link" onClick={() => window.open("https://github.com/BuddyBob/MathleticsBot")}/> </h2>
+                        <h1 className="post-title"> Mathletics Bot a <br/> Homework Buddy <input type="image" width="40px" src={gHub} alt="GitHub" className="github-link" onClick={() => window.open("https://github.com/BuddyBob/MathleticsBot")}/>  </h1>
+                            <h2 className="post-subtitle">What The Heck?</h2>
                             <p>
                                 Mathletics is a website that teachers use to assign math homework. 
                                 Generally, teachers assign hundreds of tedious math problems and after sometime, it becomes a pain. 
