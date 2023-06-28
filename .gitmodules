@@ -1,0 +1,3 @@
+[submodule "projects/quick-type"]
+	path = projects/quick-type
+	url = https://github.com/BuddyBob/quick-type.git

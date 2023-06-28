@@ -1,7 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter as Router } from 'react-router-dom';
-import App from './App';
 import './index.css';
 
-ReactDOM.render(<Router>< App /></Router>, document.getElementById("root"));
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+
+import App from './App';
+import QuickType from '../projects/quick-type/src/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const subdomain = window.location.host.split('.')[0];
+
+ReactDOM.render(
+  <Router>
+    {subdomain === 'quick-type' ? (
+      <Route path="/" component={QuickType} />
+    ) : (
+      <Route path="/" component={App} />
+    )}
+  </Router>,
+  document.getElementById('root')
+);

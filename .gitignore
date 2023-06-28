@@ -26,3 +26,9 @@ yarn-error.log*
 
 #history
 .history
+
+.
+
+*.thavasantonio.com
+thavasantonio.com.csr
+thavasantonio.com.key
