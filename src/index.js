@@ -3,7 +3,7 @@ import './index.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import App from './App';
-import QuickType from './quick-type-symlink/src/App';
+import QuickType from 'quick-type-symlink/src/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

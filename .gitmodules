@@ -1,3 +1,6 @@
 [submodule "projects/quick-type"]
 	path = projects/quick-type
 	url = https://github.com/BuddyBob/quick-type.git
+[submodule "src/projects/quick-type"]
+	path = src/projects/quick-type
+	url = https://github.com/BuddyBob/quick-type.git
